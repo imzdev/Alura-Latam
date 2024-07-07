@@ -1,0 +1,512 @@
+body {
+    background-color: #F3F5FC;
+    font-family: 'Roboto', sans-serif;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    max-height: 80vh;
+    position: relative;
+    min-height: 90vh;
+}
+main .logo {
+    width: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+
+} 
+main .logo img {
+    width: 2em;
+}
+
+main .container {
+    border: transparent;
+    width: 50vw;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+main .container .input_text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+main .container .input_text textarea {
+    width: 100%;
+    height: 90%;
+    resize: none;
+    background: transparent;
+    border: none;
+    color: #0A3871; 
+    font-weight: 400;
+    font-size: 2em;
+    padding: 0;
+}
+main .container .input_text textarea::placeholder {
+    color: #0A3871; 
+}
+main .container .input_text textarea:focus{
+    outline: none;
+}
+main .container .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+}
+main .output_text {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+.output_text .result{
+    background-color: #FFFF;
+    height: 80vh;
+    width: 75%;
+    border-radius: 2em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0em 0em 2em 0.1em #00000031;
+}
+.result .no_output {
+    color: #0A3871;
+    font-weight: 700;
+    text-align: center;
+    height: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.result .result_output{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.result .result_output button{
+    margin-bottom: 2em;
+}
+.result .result_output .output_text_decrypt{
+    height: 100%;
+    width: 100%;
+    margin-top: 1em;
+    resize: none;
+    background: transparent;
+    border: none;
+    color: #0A3871; 
+    font-weight: 400;
+    font-size: 2em;
+}
+.result .result_output .output_text_decrypt:focus{
+    outline: none;
+}
+
+.result .no_output img{
+    width: 100%;
+}
+main .result .no_output,
+main .result .result_output{
+    padding: 2em;
+}
+
+/* style de los botones */
+main .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1em; 
+    
+}
+main .button {
+    padding: 1em;
+    width: 100%;
+    border-radius: 1em;
+    border: none;
+    border: 2px solid #0A3871;
+    transition: border-color 250ms, background-color 250ms;
+}
+main .button:hover,
+.footer-distributed .button_enviar:hover{
+    cursor: pointer;
+}
+main .button.button_encrypt {
+    background:#0A3871;
+    color:white;
+    font-weight: 500;
+}
+main .button.button_encrypt:hover {
+    background-color: #4576b1;
+    border-color: #4576b1;
+}
+main .button.button_decrypt {
+    background: transparent;
+    color:#0A3871;
+    font-weight: 500;   
+}
+main .button.button_decrypt:hover {
+    background-color: #dde2e8;
+}  
+main .bottom small{
+    color: #0A3871;
+    font-weight: 500;
+    display: flex;
+    align-items: end;
+}
+main .bottom small img {
+    columns: #0A3871;
+    padding-right: 0.35em;
+}
+
+/* Cambio de dysplay de salida entre muñeco y texto transformado */
+.result.no_texto .result_output {
+    display: none;
+}
+.result:not(.no_texto) .result_output {
+    display: flex;
+}
+
+.result.no_texto .no_output {
+    display: flex;
+}
+.result:not(.no_texto) .no_output  {
+    display: none;
+}
+
+/* footer style */
+.footer-distributed{
+	background: #0A3871;
+	box-shadow: 0em 0em 2em 0.1em #00000031;
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: right;
+    margin-top: 2vh;
+	padding: 1em 4em 0.5em;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ffffff;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: lightblue;
+}
+
+
+.footer-distributed .footer-left{
+	float: right;
+}
+
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 32px 'Roboto', cursive;
+	margin: 0 0 1vh;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8em;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #ffffff;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 1.5em;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 15%;
+	
+	cursor: pointer;
+	background-color: #F3F5FC;
+	border-radius: 0.1em;
+    align-items: center;
+	font-size: 150%;
+	color: #0A3871;
+	text-align: center;
+    padding: 0.2em;
+	margin: 0 0.1em 0.1em 0;
+
+	
+}
+
+.sociallinks{
+    position:relative;
+    bottom: 2px;
+    padding: 0 20px;
+}
+.sociallinks i{
+    font-size: 2em;
+    margin: 10px 20px;
+    cursor: pointer;
+    color: #ffffff;
+    transform: 0.2s ease;
+}
+.sociallinks i:hover{
+    font-size: 2.4em;
+    color: #000000;
+}
+
+ /* Estilos personalizados para el alert*/
+ #custom-alert {
+    position: fixed;
+    top: 10vh;
+    left: 30vw;
+    right: 30vw;
+    background-color:#4576b1;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #0A3871;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bolder;
+    display: none;
+  }
+
+/*Responsive*/
+@media screen and (max-width: 1400px){
+
+    main .container{
+        width: 50vw;
+    }
+    main .result{
+        width: 40vw;
+    }
+    
+}
+@media screen and (max-width: 1023px){
+.main { 
+        flex-direction: column;
+        max-height: inherit;
+}
+.main .logo,
+.main .container,
+.main .output_text{
+        width: 100%;
+}
+.main .logo{
+        justify-content: flex-start;
+}
+main .logo img{
+        padding-left: 2em;
+}
+main .container {
+        padding-top: 5vh;
+}
+main .container .input_text {
+        width: 100%;
+        padding: 2em;
+}
+main .container .input_text textarea{
+        height: 50vh;
+        width: 90%;
+}
+main .output_text{
+        margin:0;
+}
+main .output_text .result {
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em;
+        height: auto;
+        overflow: hidden;
+}
+main .result .result_output .result_decrypt{
+        overflow-y: auto;
+        max-height: 25vh;
+        margin: 2.5em;
+}
+main .result .no_output img{
+        display: none;
+}
+main .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 1em; 
+        
+}
+.footer-distributed {
+		font: bold 12px sans-serif;
+        padding: 1em 2.5em 0.5em;
+        
+}
+.footer-distributed h3{
+        font: normal 2.5vh 'Roboto', cursive;
+        margin: 0 0 10px;
+}
+
+.footer-distributed .footer-company-name{
+		font-size: 2vh;
+}
+
+.footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 20%;
+        height: 10%;
+        cursor: pointer;
+        background-color: #F3F5FC;
+        border-radius: 0.1em;
+    
+        font-size: 2em;
+        color: #0A3871;
+        text-align: center;
+        text-align: center;
+        padding: 0.2em;
+	    margin: 0 0.5em 0.1em 0;
+    
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+		width: 30vh;
+}
+
+.footer-distributed .footer-right p{
+        margin: 1.5em 1em 0 0;
+         
+}
+
+}
+@media screen and (max-width: 767px){
+.main { 
+        
+        flex-direction: column;
+        max-height: inherit;
+}
+.main .logo,
+.main .container,
+.main .result{
+        width: 100%;
+}
+.main .logo{
+        justify-content: flex-start;
+}
+main .logo {
+        width: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 1em;
+    
+}
+.main .logo img{
+        padding-left: 2em;
+}
+.main .container {
+        padding-top: 2vh;
+}
+.main .container .input_text {
+        width: 100%;
+        padding: 1em 2em 1em;
+}
+.main .container .input_text textarea{
+        height: 20vh;
+}
+.main .result .result{
+        width: 100%;
+        margin: 2em;
+        height: auto;
+        overflow: hidden;
+}
+.main .result .result .result_output .result_decrypt{
+        overflow-y: auto;
+        max-height: 30vh;
+        margin: 2.5em;
+}
+.main .result .result .result_output{
+	font-weight: 400;
+	padding: 1em;
+	height: 70%;
+}
+main .result .no_output img{
+        display: none;
+}
+main .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 1em; 
+        
+}
+.footer-distributed {
+		font: bold 12px sans-serif;
+        padding: 1em 2.5em;
+        margin-top: 6vh;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-right{
+		float: none;
+		max-width: 90%;
+		margin: 0 auto;
+}
+    
+.footer-distributed .footer-company-name{
+		font-size: 8px;
+}
+
+.footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 20%;
+        height: 20%;
+        cursor: pointer;
+        background-color: #F3F5FC;
+        border-radius: 0.1em;
+        font-size: 2em;
+        color: #0A3871;
+        text-align: center;
+        text-align: center;
+        padding: 0.2em;
+	    margin: 0 0.2em 0.1em 0;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+		width: 80%;
+}
+.footer-distributed .footer-company-name{
+        font-size: 1em;
+}
+
+.footer-distributed .footer-right p{
+        margin: 1em 1em 0 0;   
+}
+.footer-distributed .button_enviar{
+        float: left;
+	font-weigth: 2em;
+}
+    
+}

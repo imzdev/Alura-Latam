@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/format.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Encriptador de texto</title>
+    </head>
+
+    <body>
+        <main class="main">
+            <div class="logo">
+                <img src="img/Logo-a.svg" alt="logo">
+            </div>
+            <div class="container">
+                <div class="input_text">
+                    <textarea class="input_text_encrypt" id="input_text_encrypt" placeholder="Ingrese texto aquí"></textarea>
+                    <div class="bottom">
+                        <small><img src="./img/icons-alert.svg"> letras minusculas y sin acentos</small>
+                        <div class="buttons">
+                            <button class="button button_encrypt" id="button_encrypt">Encriptar</button>
+                            <button class="button button_decrypt"id="button_decrypt">Desencriptar</button>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="output_text" id="output_text">
+                <div class="result no_texto">
+                    <div class="no_output">
+                        <img id="Muneco" class="" src="img/Munheco.svg" alt="muneco">
+                        <h2>Ningun mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                    <div class="result_output">
+                        <textarea class="output_text_decrypt" id="output_text_decrypt" ></textarea>
+                        <button class="button button_decrypt button_copiar"id="button_copiar">Copiar</button>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+        <footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Encriptador:<span>Alura Latam</span>/></h3>
+				<p class="footer-company-name">imzdev. © 2024 - Challenge #1</p>
+
+                <div class="sociallinks">
+                    <a href="https://github.com/imzdev"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/imzdev/"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/aluralatam/"><i class="fa fa-instagram"></i></a>
+                </div>
+			</div>
+
+		</footer>
+        <script src="/js/app.js"> </script>  
+        <div id="custom-alert"></div>
+    </body>
+</html>
